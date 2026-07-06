@@ -254,6 +254,22 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+    filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
+    border-radius: 6px;
+}
+
+.logo-img:hover {
+    filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.6)) drop-shadow(0 0 30px rgba(157, 78, 221, 0.4));
+    transform: scale(1.05);
 }
 
 .nav-menu ul {
