@@ -1,452 +1,556 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Thuận Lâm Tự - Fullstack Developer & QA Analyst</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* ==========================================
+      /* ==========================================
            WEB DISPLAY STYLES (DARK MODE)
            ========================================== */
-        :root {
-            --bg-color: #0b0c10;
-            --container-bg: #12131a;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --text-color: #e2e8f0;
-            --text-muted: #94a3b8;
-            --accent-color: #00f2fe;
-            --accent-purple: #9d4edd;
-        }
+      :root {
+        --bg-color: #0b0c10;
+        --container-bg: #12131a;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --text-color: #e2e8f0;
+        --text-muted: #94a3b8;
+        --accent-color: #00f2fe;
+        --accent-purple: #9d4edd;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: "Outfit", sans-serif;
+        line-height: 1.5;
+        padding: 2rem 0;
+      }
+
+      .print-btn-container {
+        max-width: 800px;
+        margin: 0 auto 1.5rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      .print-instruction {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .btn-print {
+        background: linear-gradient(
+          135deg,
+          var(--accent-color) 0%,
+          var(--accent-purple) 100%
+        );
+        color: #000;
+        border: none;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .btn-print:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+      }
+
+      /* CV Sheet Layout */
+      .cv-sheet {
+        background-color: var(--container-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* CV Grid */
+      .cv-header {
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      .cv-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--accent-color);
+        flex-shrink: 0;
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+      }
+
+      .header-title h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.25rem;
+        background: linear-gradient(
+          135deg,
+          var(--accent-color) 0%,
+          var(--accent-purple) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .header-title h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--accent-color);
+      }
+
+      .contact-info {
+        text-align: right;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .contact-info a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        color: var(--accent-color);
+      }
+
+      .cv-section {
+        margin-bottom: 1.8rem;
+      }
+      .cv-section:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .summary-text {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        text-align: justify;
+      }
+
+      /* Skills Layout */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      .skill-group h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.4rem;
+      }
+      .skill-group p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* Experience & Education Layout */
+      .timeline-entry {
+        margin-bottom: 1.25rem;
+      }
+      .timeline-entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+      }
+      .entry-company {
+        color: var(--accent-purple);
+      }
+      .entry-date {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        font-weight: 400;
+      }
+      .entry-details {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-top: 0.4rem;
+        padding-left: 1.2rem;
+      }
+      .entry-details li {
+        margin-bottom: 0.25rem;
+      }
+
+      /* Project Entry */
+      .project-entry {
+        margin-bottom: 1.25rem;
+      }
+      .project-entry:last-child {
+        margin-bottom: 0;
+      }
+      .project-name {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .project-tech {
+        font-size: 0.8rem;
+        color: var(--accent-color);
+        font-weight: 500;
+        margin-left: 8px;
+      }
+
+      /* ==========================================
+           PRINT STYLES (A4 BLACK & WHITE)
+           ========================================== */
+      @media print {
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Outfit', sans-serif;
-            line-height: 1.5;
-            padding: 2rem 0;
+          background-color: #fff;
+          color: #000;
+          padding: 0;
+          font-size: 11pt;
         }
 
         .print-btn-container {
-            max-width: 800px;
-            margin: 0 auto 1.5rem auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
+          display: none;
         }
 
-        .print-instruction {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .btn-print {
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
-            color: #000;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn-print:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
-        }
-
-        /* CV Sheet Layout */
         .cv-sheet {
-            background-color: var(--container-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        /* CV Grid */
-        .cv-header {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-        }
-
-        .cv-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--accent-color);
-            flex-shrink: 0;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+          border: none;
+          box-shadow: none;
+          padding: 0;
+          max-width: 100%;
+          background-color: #fff;
         }
 
         .header-title h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.25rem;
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          background: none;
+          -webkit-background-clip: initial;
+          -webkit-text-fill-color: initial;
+          color: #000;
+          font-size: 24pt;
         }
 
         .header-title h2 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--accent-color);
+          color: #333;
+          font-size: 13pt;
         }
 
         .contact-info {
-            text-align: right;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+          color: #444;
         }
         .contact-info a {
-            color: var(--text-color);
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        .cv-section {
-            margin-bottom: 1.8rem;
-        }
-        .cv-section:last-child {
-            margin-bottom: 0;
+          color: #000;
         }
 
         .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+          color: #000;
+          border-bottom: 1.5pt solid #000;
+          font-size: 12pt;
+          margin-bottom: 8pt;
         }
 
         .summary-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            text-align: justify;
+          color: #222;
+          font-size: 10pt;
         }
 
-        /* Skills Layout */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
         .skill-group h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 0.4rem;
+          color: #000;
+          font-size: 10.5pt;
         }
         .skill-group p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+          color: #333;
+          font-size: 9.5pt;
         }
 
-        /* Experience & Education Layout */
-        .timeline-entry {
-            margin-bottom: 1.25rem;
-        }
-        .timeline-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.3rem;
-        }
         .entry-company {
-            color: var(--accent-purple);
+          color: #000;
+          font-weight: 700;
         }
         .entry-date {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 400;
+          color: #444;
         }
         .entry-details {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-top: 0.4rem;
-            padding-left: 1.2rem;
-        }
-        .entry-details li {
-            margin-bottom: 0.25rem;
+          color: #222;
+          font-size: 9.5pt;
         }
 
-        /* Project Entry */
-        .project-entry {
-            margin-bottom: 1.25rem;
-        }
-        .project-entry:last-child {
-            margin-bottom: 0;
-        }
-        .project-name {
-            font-weight: 700;
-            font-size: 1rem;
-        }
         .project-tech {
-            font-size: 0.8rem;
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-left: 8px;
+          color: #444;
+          font-weight: 600;
         }
 
-        /* ==========================================
-           PRINT STYLES (A4 BLACK & WHITE)
-           ========================================== */
-        @media print {
-            body {
-                background-color: #fff;
-                color: #000;
-                padding: 0;
-                font-size: 11pt;
-            }
-
-            .print-btn-container {
-                display: none;
-            }
-
-            .cv-sheet {
-                border: none;
-                box-shadow: none;
-                padding: 0;
-                max-width: 100%;
-                background-color: #fff;
-            }
-
-            .header-title h1 {
-                background: none;
-                -webkit-background-clip: initial;
-                -webkit-text-fill-color: initial;
-                color: #000;
-                font-size: 24pt;
-            }
-
-            .header-title h2 {
-                color: #333;
-                font-size: 13pt;
-            }
-
-            .contact-info {
-                color: #444;
-            }
-            .contact-info a {
-                color: #000;
-            }
-
-            .section-title {
-                color: #000;
-                border-bottom: 1.5pt solid #000;
-                font-size: 12pt;
-                margin-bottom: 8pt;
-            }
-
-            .summary-text {
-                color: #222;
-                font-size: 10pt;
-            }
-
-            .skill-group h4 {
-                color: #000;
-                font-size: 10.5pt;
-            }
-            .skill-group p {
-                color: #333;
-                font-size: 9.5pt;
-            }
-
-            .entry-company {
-                color: #000;
-                font-weight: 700;
-            }
-            .entry-date {
-                color: #444;
-            }
-            .entry-details {
-                color: #222;
-                font-size: 9.5pt;
-            }
-
-            .project-tech {
-                color: #444;
-                font-weight: 600;
-            }
-
-            .cv-header {
-                border-bottom: 1.5pt solid #000;
-            }
-
-            a {
-                text-decoration: none;
-                color: #000;
-            }
+        .cv-header {
+          border-bottom: 1.5pt solid #000;
         }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Instruction and Print Trigger Action -->
     <div class="print-btn-container">
-        <span class="print-instruction">Lưu ý: Nhấn Ctrl + P và chọn "Lưu dưới dạng PDF" (Save as PDF) để xuất file.</span>
-        <button class="btn-print" onclick="window.print()">In / Xuất PDF</button>
+      <span class="print-instruction"
+        >Lưu ý: Nhấn Ctrl + P và chọn "Lưu dưới dạng PDF" (Save as PDF) để xuất
+        file.</span
+      >
+      <button class="btn-print" onclick="window.print()">In / Xuất PDF</button>
     </div>
 
     <!-- CV Sheet Container -->
     <div class="cv-sheet">
-        <!-- Header -->
-        <header class="cv-header">
-            <div class="header-left">
-                <div class="cv-avatar">
-                    <img src="avatar.png" alt="Thuận Lâm Tự" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;">
-                </div>
-                <div class="header-title">
-                    <h1>THUẬN LÂM TỰ</h1>
-                    <h2>Software Engineer | Fullstack &amp; QA Analyst</h2>
-                </div>
-            </div>
-            <div class="contact-info">
-                <span>Số điện thoại: 0397 473 493</span>
-                <span>Email: <a href="mailto:lamthuan1243@gmail.com">lamthuan1243@gmail.com</a></span>
-                <span>GitHub: <a href="https://github.com/ThuanLamTu" target="_blank">github.com/ThuanLamTu</a></span>
-                <span>Facebook: <a href="http://facebook.com/letmedownslowly25/" target="_blank">fb.com/letmedownslowly25</a></span>
-                <span>Địa chỉ: 64 Đường 16, Linh Trung, Thủ Đức, TP.HCM</span>
-            </div>
-        </header>
+      <!-- Header -->
+      <header class="cv-header">
+        <div class="header-left">
+          <div class="cv-avatar">
+            <img
+              src="avatar.png"
+              alt="Thuận Lâm Tự"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <div class="header-title">
+            <h1>THUẬN LÂM TỰ</h1>
+            <h2>Software Engineer | Fullstack &amp; QA Analyst</h2>
+          </div>
+        </div>
+        <div class="contact-info">
+          <span>Số điện thoại: 0397 473 493</span>
+          <span
+            >Email:
+            <a href="mailto:lamthuan1243@gmail.com"
+              >lamthuan1243@gmail.com</a
+            ></span
+          >
+          <span
+            >GitHub:
+            <a href="https://github.com/ThuanLamTu" target="_blank"
+              >github.com/ThuanLamTu</a
+            ></span
+          >
+          <span
+            >Facebook:
+            <a href="http://facebook.com/letmedownslowly25/" target="_blank"
+              >fb.com/letmedownslowly25</a
+            ></span
+          >
+          <span>Địa chỉ: 64 Đường 16, Linh Trung, Thủ Đức, TP.HCM</span>
+        </div>
+      </header>
 
-        <!-- Summary -->
-        <section class="cv-section">
-            <h3 class="section-title">Tóm tắt nghề nghiệp</h3>
-            <p class="summary-text">
-                Là Cử nhân Khoa học Máy tính có nền tảng tư duy hướng đối tượng (OOP) vững chắc và khả năng lập trình ứng dụng Web MERN Stack (React, Node.js, MongoDB). Định hướng bản thân phát triển toàn diện, chú trọng cả khả năng tự phát triển phần mềm (Fullstack Development) lẫn quy trình kiểm thử nâng cao chất lượng API (Postman Testing). Khả năng nghiên cứu độc lập tốt và ứng dụng thành thạo các công cụ Generative AI để tăng tốc hiệu suất công việc. Sẵn sàng cống hiến cho các dự án và không ngừng học hỏi.
-            </p>
-        </section>
+      <!-- Summary -->
+      <section class="cv-section">
+        <h3 class="section-title">Tóm tắt nghề nghiệp</h3>
+        <p class="summary-text">
+          Là Cử nhân Khoa học Máy tính có nền tảng tư duy hướng đối tượng (OOP)
+          vững chắc và khả năng lập trình ứng dụng Web MERN Stack (React,
+          Node.js, MongoDB). Định hướng bản thân phát triển toàn diện, chú trọng
+          cả khả năng tự phát triển phần mềm (Fullstack Development) lẫn quy
+          trình kiểm thử nâng cao chất lượng API (Postman Testing). Khả năng
+          nghiên cứu độc lập tốt và ứng dụng thành thạo các công cụ Generative
+          AI để tăng tốc hiệu suất công việc. Sẵn sàng cống hiến cho các dự án
+          và không ngừng học hỏi.
+        </p>
+      </section>
 
-        <!-- Education -->
-        <section class="cv-section">
-            <h3 class="section-title">Học vấn</h3>
-            <div class="timeline-entry">
-                <div class="entry-header">
-                    <span>Đại học Công nghệ thông tin (UIT) - ĐHQG TP.HCM</span>
-                    <span class="entry-date">2021 - 2025</span>
-                </div>
-                <div>Chuyên ngành: Khoa học Máy tính | Đồ án tốt nghiệp xuất sắc</div>
-            </div>
-        </section>
+      <!-- Education -->
+      <section class="cv-section">
+        <h3 class="section-title">Học vấn</h3>
+        <div class="timeline-entry">
+          <div class="entry-header">
+            <span>Đại học Công nghệ thông tin (UIT) - ĐHQG TP.HCM</span>
+            <span class="entry-date">2021 - 2025</span>
+          </div>
+          <div>Chuyên ngành: Khoa học Máy tính</div>
+        </div>
+      </section>
 
-        <!-- Skills -->
-        <section class="cv-section">
-            <h3 class="section-title">Kỹ năng chuyên môn</h3>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h4>Lập trình Web (Fullstack)</h4>
-                    <p>JavaScript (ES6+), React.js, Node.js, Express, HTML5, CSS3</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Kiểm thử &amp; Cơ sở dữ liệu</h4>
-                    <p>API Testing (Postman), Manual Testing, MongoDB, SQL</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Ngôn ngữ nền tảng &amp; Thiết kế</h4>
-                    <p>Java (OOP Core), C/C++, UI/UX (Figma)</p>
-                </div>
-                <div class="skill-group">
-                    <h4>Công cụ &amp; Kỹ năng bổ trợ</h4>
-                    <p>Git / GitHub, AI Tools (Gemini, Prompt Engineering), SCRUM</p>
-                </div>
-            </div>
-        </section>
+      <!-- Skills -->
+      <section class="cv-section">
+        <h3 class="section-title">Kỹ năng chuyên môn</h3>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>Lập trình Web (Fullstack)</h4>
+            <p>JavaScript (ES6+), React.js, Node.js, Express, HTML5, CSS3</p>
+          </div>
+          <div class="skill-group">
+            <h4>Kiểm thử &amp; Cơ sở dữ liệu</h4>
+            <p>API Testing (Postman), Manual Testing, MongoDB, SQL</p>
+          </div>
+          <div class="skill-group">
+            <h4>Ngôn ngữ nền tảng &amp; Thiết kế</h4>
+            <p>Java (OOP Core), C/C++, UI/UX (Figma)</p>
+          </div>
+          <div class="skill-group">
+            <h4>Công cụ &amp; Kỹ năng bổ trợ</h4>
+            <p>Git / GitHub, AI Tools (Gemini, Prompt Engineering), SCRUM</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Experience -->
-        <section class="cv-section">
-            <h3 class="section-title">Kinh nghiệm làm việc</h3>
-            <div class="timeline-entry">
-                <div class="entry-header">
-                    <span>Thực tập sinh Phát triển Web &amp; Kiểm thử</span>
-                    <span class="entry-date">24/01/2025 - 26/04/2025</span>
-                </div>
-                <div class="entry-company">Công ty TNHH Tin Học và Thương Mại DKP</div>
-                <ul class="entry-details">
-                    <li>Tham gia xây dựng và bảo trì các API endpoint cho hệ thống ERP nội bộ sử dụng Node.js &amp; Express.</li>
-                    <li>Sử dụng Figma để chuyển đổi giao diện UI thiết kế sẵn thành các component React.js đáp ứng responsive trên Mobile và Desktop.</li>
-                    <li>Lập tài liệu API chi tiết và phát triển bộ test case tự động hóa (Collection Runner) trên Postman để kiểm thử API, tối ưu tốc độ phát hiện lỗi tăng 20%.</li>
-                    <li>Ứng dụng các trợ lý AI (Gemini, ChatGPT) hỗ trợ debug, viết test scripts và viết tài liệu hướng dẫn kỹ thuật.</li>
-                </ul>
-            </div>
-        </section>
+      <!-- Experience -->
+      <section class="cv-section">
+        <h3 class="section-title">Kinh nghiệm làm việc</h3>
+        <div class="timeline-entry">
+          <div class="entry-header">
+            <span>Thực tập sinh Phát triển Web &amp; Kiểm thử</span>
+            <span class="entry-date">24/01/2025 - 26/04/2025</span>
+          </div>
+          <div class="entry-company">
+            Công ty TNHH Tin Học và Thương Mại DKP
+          </div>
+          <ul class="entry-details">
+            <li>
+              Tham gia xây dựng và bảo trì các API endpoint cho hệ thống ERP nội
+              bộ sử dụng Node.js &amp; Express.
+            </li>
+            <li>
+              Sử dụng Figma để chuyển đổi giao diện UI thiết kế sẵn thành các
+              component React.js đáp ứng responsive trên Mobile và Desktop.
+            </li>
+            <li>
+              Lập tài liệu API chi tiết và phát triển bộ test case tự động hóa
+              (Collection Runner) trên Postman để kiểm thử API, tối ưu tốc độ
+              phát hiện lỗi tăng 20%.
+            </li>
+            <li>
+              Ứng dụng các trợ lý AI (Gemini, ChatGPT) hỗ trợ debug, viết test
+              scripts và viết tài liệu hướng dẫn kỹ thuật.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- Projects -->
-        <section class="cv-section">
-            <h3 class="section-title">Dự án tiêu biểu</h3>
-            
-            <div class="project-entry">
-                <div class="entry-header">
-                    <span>LocaTrip <span class="project-tech">JavaScript, Node.js, React, MongoDB</span></span>
-                    <span class="entry-date"><a href="https://github.com/ThuanLamTu/LocaTrip" target="_blank">github.com/ThuanLamTu/LocaTrip</a></span>
-                </div>
-                <ul class="entry-details">
-                    <li>Xây dựng ứng dụng hỗ trợ du lịch địa phương cho phép người dùng tìm kiếm, đặt chỗ và khám phá các địa điểm du lịch gần với vị trí của mình.</li>
-                    <li>Tích hợp bản đồ và hệ thống đánh giá sử dụng MERN Stack, code được tổ chức sạch theo mô hình MVC.</li>
-                </ul>
-            </div>
+      <!-- Projects -->
+      <section class="cv-section">
+        <h3 class="section-title">Dự án tiêu biểu</h3>
 
-            <div class="project-entry">
-                <div class="entry-header">
-                    <span>Chicken Invader Game <span class="project-tech">C++, OOP, Game Dev</span></span>
-                    <span class="entry-date"><a href="https://github.com/ThuanLamTu/ChickenInvader" target="_blank">github.com/ThuanLamTu/ChickenInvader</a></span>
-                </div>
-                <ul class="entry-details">
-                    <li>Xây dựng game bắn gà arcade bằng C++ áp dụng lập trình hướng đối tượng (OOP): kế thừa, đóng gói, đa hình.</li>
-                    <li>Thực hành các Design Pattern và quản lý vòng đời game object hiệu quả.</li>
-                </ul>
-            </div>
+        <div class="project-entry">
+          <div class="entry-header">
+            <span
+              >LocaTrip
+              <span class="project-tech"
+                >JavaScript, Node.js, React, MongoDB</span
+              ></span
+            >
+            <span class="entry-date"
+              ><a href="https://github.com/ThuanLamTu/LocaTrip" target="_blank"
+                >github.com/ThuanLamTu/LocaTrip</a
+              ></span
+            >
+          </div>
+          <ul class="entry-details">
+            <li>
+              Xây dựng ứng dụng hỗ trợ du lịch địa phương cho phép người dùng
+              tìm kiếm, đặt chỗ và khám phá các địa điểm du lịch gần với vị trí
+              của mình.
+            </li>
+            <li>
+              Tích hợp bản đồ và hệ thống đánh giá sử dụng MERN Stack, code được
+              tổ chức sạch theo mô hình MVC.
+            </li>
+          </ul>
+        </div>
 
-            <div class="project-entry">
-                <div class="entry-header">
-                    <span>Portfolio Website <span class="project-tech">HTML, CSS, JavaScript, GitHub Pages</span></span>
-                    <span class="entry-date"><a href="https://github.com/ThuanLamTu/Portfolio__tlt" target="_blank">github.com/ThuanLamTu/Portfolio__tlt</a></span>
-                </div>
-                <ul class="entry-details">
-                    <li>Xây dựng trang portfolio cá nhân bằng HTML/CSS/JS thuần, thiết kế responsive và được host miễn phí trên GitHub Pages.</li>
-                </ul>
-            </div>
-        </section>
+        <div class="project-entry">
+          <div class="entry-header">
+            <span
+              >Chicken Invader Game
+              <span class="project-tech">C++, OOP, Game Dev</span></span
+            >
+            <span class="entry-date"
+              ><a
+                href="https://github.com/ThuanLamTu/ChickenInvader"
+                target="_blank"
+                >github.com/ThuanLamTu/ChickenInvader</a
+              ></span
+            >
+          </div>
+          <ul class="entry-details">
+            <li>
+              Xây dựng game bắn gà arcade bằng C++ áp dụng lập trình hướng đối
+              tượng (OOP): kế thừa, đóng gói, đa hình.
+            </li>
+            <li>
+              Thực hành các Design Pattern và quản lý vòng đời game object hiệu
+              quả.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-entry">
+          <div class="entry-header">
+            <span
+              >Portfolio Website
+              <span class="project-tech"
+                >HTML, CSS, JavaScript, GitHub Pages</span
+              ></span
+            >
+            <span class="entry-date"
+              ><a
+                href="https://github.com/ThuanLamTu/Portfolio__tlt"
+                target="_blank"
+                >github.com/ThuanLamTu/Portfolio__tlt</a
+              ></span
+            >
+          </div>
+          <ul class="entry-details">
+            <li>
+              Xây dựng trang portfolio cá nhân bằng HTML/CSS/JS thuần, thiết kế
+              responsive và được host miễn phí trên GitHub Pages.
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
-
-</body>
+  </body>
 </html>
