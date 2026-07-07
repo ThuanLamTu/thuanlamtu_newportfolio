@@ -121,8 +121,7 @@ export function renderProjects() {
                 <span class="project-tag">OOP</span>
               </div>
               <h3>Chicken Invader Game</h3>
-              <p class="project-role"><strong>Đồ án môn OOP</strong> — Nhóm 4 người</p>
-              <p>Game bắn gà arcade 2D xây dựng bằng Java + JavaFX 21 áp dụng lập trình hướng đối tượng (OOP). Quản lý vòng đời game object, hệ thống điểm số và nhiều level.</p>
+              <p>Game bắn gà arcade 2D xây dựng bằng Java + JavaFX 21 áp dụng lập trình hướng đối tượng (OOP). Quản lý vòng đời game object, hệ thống điểm số và nâng cấp đạn theo level.</p>
               <ul class="project-highlights">
                 <li>✓ Java + JavaFX 21 + Apache Maven</li>
                 <li>✓ OOP: Player, Enemy, Bullet, GameManager</li>
