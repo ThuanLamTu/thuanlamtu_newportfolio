@@ -1,0 +1,142 @@
+/* ==========================================
+   CV PAGE — WEB DISPLAY STYLES (DARK MODE)
+   ========================================== */
+:root {
+  --bg-color: #0b0c10;
+  --container-bg: #12131a;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-color: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent-color: #00f2fe;
+  --accent-purple: #9d4edd;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  padding: 2rem 0;
+}
+
+/* ---- Print Button Bar ---- */
+.print-btn-container {
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.print-instruction { color: var(--text-muted); font-size: 0.9rem; }
+.btn-print {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-print:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4); }
+
+/* ---- CV Sheet ---- */
+.cv-sheet {
+  background-color: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Header ---- */
+.cv-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left { display: flex; align-items: center; gap: 1.25rem; }
+.cv-avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent-color);
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+.cv-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; }
+
+.header-title h1 {
+  font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.25rem;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-purple) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header-title h2 { font-size: 1.2rem; font-weight: 600; color: var(--accent-color); }
+
+.contact-info { text-align: right; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px; }
+.contact-info a { color: var(--text-color); text-decoration: none; }
+.contact-info a:hover { color: var(--accent-color); }
+
+/* ---- Sections ---- */
+.cv-section { margin-bottom: 1.8rem; }
+.cv-section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-size: 1.1rem; font-weight: 700; color: var(--accent-color);
+  text-transform: uppercase; letter-spacing: 1px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem; margin-bottom: 1rem;
+}
+.summary-text { font-size: 0.95rem; color: var(--text-muted); text-align: justify; }
+
+/* ---- Skills Grid ---- */
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.skill-group h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.4rem; }
+.skill-group p { font-size: 0.9rem; color: var(--text-muted); }
+
+/* ---- Timeline Entries ---- */
+.timeline-entry { margin-bottom: 1.25rem; }
+.timeline-entry:last-child { margin-bottom: 0; }
+.entry-header { display: flex; justify-content: space-between; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+.entry-company { color: var(--accent-purple); }
+.entry-date { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+.entry-details { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem; padding-left: 1.2rem; }
+.entry-details li { margin-bottom: 0.25rem; }
+
+/* ---- Project Entries ---- */
+.project-entry { margin-bottom: 1.25rem; }
+.project-entry:last-child { margin-bottom: 0; }
+.project-name { font-weight: 700; font-size: 1rem; }
+.project-tech { font-size: 0.8rem; color: var(--accent-color); font-weight: 500; margin-left: 8px; }
+
+/* ==========================================
+   PRINT STYLES (A4 BLACK & WHITE)
+   ========================================== */
+@media print {
+  body { background-color: #fff; color: #000; padding: 0; font-size: 11pt; }
+  .print-btn-container { display: none; }
+  .cv-sheet { border: none; box-shadow: none; padding: 0; max-width: 100%; background-color: #fff; }
+  .header-title h1 { background: none; -webkit-background-clip: initial; -webkit-text-fill-color: initial; color: #000; font-size: 24pt; }
+  .header-title h2 { color: #333; font-size: 13pt; }
+  .contact-info { color: #444; }
+  .contact-info a { color: #000; }
+  .section-title { color: #000; border-bottom: 1.5pt solid #000; font-size: 12pt; margin-bottom: 8pt; }
+  .summary-text { color: #222; font-size: 10pt; }
+  .skill-group h4 { color: #000; font-size: 10.5pt; }
+  .skill-group p { color: #333; font-size: 9.5pt; }
+  .entry-company { color: #000; font-weight: 700; }
+  .entry-date { color: #444; }
+  .entry-details { color: #222; font-size: 9.5pt; }
+  .project-tech { color: #444; font-weight: 600; }
+  .cv-header { border-bottom: 1.5pt solid #000; }
+  a { text-decoration: none; color: #000; }
+}
