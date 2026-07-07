@@ -10,7 +10,7 @@ export function renderHero() {
           <h1 class="hero-title" id="heroTitle">
             <span class="text-gradient">THUAN LAM</span>
           </h1>
-          <h2 class="hero-subtitle" id="heroSubtitle">Frontend Developer</h2>
+          <h2 class="hero-subtitle" id="heroSubtitle">Fullstack Developer</h2>
           <p class="hero-description" id="heroDesc">
             Building Modern &amp; Responsive Web Applications
           </p>

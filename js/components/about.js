@@ -10,7 +10,7 @@ export function renderAbout() {
           <div class="about-info glass-card">
             <h3>Tôi là ai?</h3>
             <p>
-              Là <strong>Frontend Developer</strong> có kinh nghiệm xây dựng các ứng dụng web
+              Là <strong>Fullstack Developer</strong> có kinh nghiệm xây dựng các ứng dụng web
               responsive sử dụng <strong>React</strong>, <strong>JavaScript</strong>,
               <strong>Node.js</strong> và <strong>MongoDB</strong>.
             </p>

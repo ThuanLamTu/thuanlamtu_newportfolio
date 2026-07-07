@@ -13,7 +13,7 @@ export function renderExperience() {
             <div class="timeline-dot"></div>
             <div class="timeline-content glass-card">
               <span class="timeline-date">24/01/2025 - 26/04/2025</span>
-              <h3>Thực Tập Sinh Phát Triển &amp; Kiểm Thử</h3>
+              <h3>Thực Tập Sinh Phát triển Fullstack</h3>
               <span class="timeline-company">Công ty TNHH Tin Học và Thương Mại DKP</span>
               <p>
                 Tham gia lập trình các API endpoints cho hệ thống quản lý nội bộ sử dụng
@@ -29,7 +29,7 @@ export function renderExperience() {
             <div class="timeline-content glass-card">
               <span class="timeline-date">Năm 2021 - 2025</span>
               <h3>Tốt nghiệp Cử nhân Khoa học Máy tính</h3>
-              <span class="timeline-company">Đại học Công nghệ thông tin (UIT) - ĐHQG TP.HCM</span>
+              <span class="timeline-company">Đại học Quốc tế (IU) - ĐHQG TP.HCM</span>
               <p>
                 Học tập chuyên sâu về cấu trúc dữ liệu và giải thuật, lập trình hướng đối
                 tượng OOP với Java, C++. Xây dựng đồ án tốt nghiệp ứng dụng Web MERN Stack.
