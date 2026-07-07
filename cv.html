@@ -3,24 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Thuận Lâm Tự — Frontend Developer</title>
+    <title>CV Thuận Lâm Tự — Full-Stack Developer</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- CV Styles -->
     <link rel="stylesheet" href="css/cv.css" />
+    <!-- Auto-print when opened with ?print=true -->
+    <script>
+      if (new URLSearchParams(window.location.search).get('print') === 'true') {
+        window.addEventListener('load', () => {
+          // Small delay to ensure fonts/images load
+          setTimeout(() => window.print(), 600);
+        });
+      }
+    </script>
   </head>
   <body>
     <!-- Print Button Bar -->
     <div class="print-btn-container">
-      <span class="print-instruction">💡 Nhấn Ctrl + P → chọn "Save as PDF" để xuất file CV.</span>
-      <button class="btn-print" onclick="window.print()">🖨️ In / Xuất PDF</button>
+      <span class="print-instruction"
+        >💡 Nhấn Ctrl + P → chọn "Save as PDF" để xuất file CV.</span
+      >
+      <button class="btn-print" onclick="window.print()">
+        🖨️ In / Xuất PDF
+      </button>
     </div>
 
     <!-- CV Sheet -->
     <div class="cv-sheet">
-
       <!-- Header -->
       <header class="cv-header">
         <div class="header-left">
@@ -34,9 +49,24 @@
         </div>
         <div class="contact-info">
           <span>📞 0397 473 493</span>
-          <span>✉️ <a href="mailto:lamthuan1243@gmail.com">lamthuan1243@gmail.com</a></span>
-          <span>💻 <a href="https://github.com/ThuanLamTu" target="_blank">github.com/ThuanLamTu</a></span>
-          <span>📘 <a href="http://facebook.com/letmedownslowly25/" target="_blank">fb.com/letmedownslowly25</a></span>
+          <span
+            >✉️
+            <a href="mailto:lamthuan1243@gmail.com"
+              >lamthuan1243@gmail.com</a
+            ></span
+          >
+          <span
+            >💻
+            <a href="https://github.com/ThuanLamTu" target="_blank"
+              >github.com/ThuanLamTu</a
+            ></span
+          >
+          <span
+            >📘
+            <a href="http://facebook.com/letmedownslowly25/" target="_blank"
+              >fb.com/letmedownslowly25</a
+            ></span
+          >
           <span>📍 64 Đường 16, Linh Trung, Thủ Đức, TP.HCM</span>
         </div>
       </header>
@@ -45,11 +75,13 @@
       <section class="cv-section">
         <h3 class="section-title">Tóm tắt nghề nghiệp</h3>
         <p class="summary-text">
-          Cử nhân Khoa học Máy tính với kinh nghiệm phát triển ứng dụng Web Full-Stack bằng React, Node.js,
-          Express và MongoDB. Đã trực tiếp xây dựng và triển khai website cho khách hàng thực tế, đồng thời
-          có kinh nghiệm phát triển RESTful API, tích hợp dịch vụ Cloudinary và triển khai ứng dụng trên
-          môi trường production. Mong muốn phát triển sự nghiệp trong vai trò Frontend / Full-Stack Developer
-          và đóng góp vào các sản phẩm có giá trị thực tiễn.
+          Cử nhân Khoa học Máy tính với kinh nghiệm phát triển ứng dụng Web
+          Full-Stack bằng React, Node.js, Express và MongoDB. Đã trực tiếp xây
+          dựng và triển khai website cho khách hàng thực tế, đồng thời có kinh
+          nghiệm phát triển RESTful API, tích hợp dịch vụ Cloudinary và triển
+          khai ứng dụng trên môi trường production. Mong muốn phát triển sự
+          nghiệp trong vai trò Frontend / Full-Stack Developer và đóng góp vào
+          các sản phẩm có giá trị thực tiễn.
         </p>
       </section>
 
@@ -58,7 +90,11 @@
         <h3 class="section-title">Học vấn</h3>
         <div class="timeline-entry">
           <div class="entry-header">
-            <span><strong>Đại học Công nghệ thông tin (UIT) - ĐHQG TP.HCM</strong></span>
+            <span
+              ><strong
+                >Đại học Công nghệ thông tin (UIT) - ĐHQG TP.HCM</strong
+              ></span
+            >
             <span class="entry-date">2021 – 2025</span>
           </div>
           <div><strong>Chuyên ngành:</strong> Khoa học Máy tính</div>
@@ -72,7 +108,10 @@
         <div class="skills-grid">
           <div class="skill-group">
             <h4>Frontend</h4>
-            <p>HTML5, CSS3, JavaScript ES6+, React.js, TailwindCSS, Responsive Design</p>
+            <p>
+              HTML5, CSS3, JavaScript ES6+, React.js, TailwindCSS, Responsive
+              Design
+            </p>
           </div>
           <div class="skill-group">
             <h4>Backend</h4>
@@ -97,12 +136,26 @@
             <span><strong>Thực tập sinh Full-Stack Developer</strong></span>
             <span class="entry-date">24/01/2025 – 26/04/2025</span>
           </div>
-          <div class="entry-company">Công ty TNHH Tin Học và Thương Mại DKP</div>
+          <div class="entry-company">
+            Công ty TNHH Tin Học và Thương Mại DKP
+          </div>
           <ul class="entry-details">
-            <li>Phát triển và bảo trì các RESTful API cho hệ thống nội bộ bằng Node.js và Express.js.</li>
-            <li>Chuyển đổi thiết kế từ Figma thành giao diện React.js Responsive trên Desktop và Mobile.</li>
-            <li>Xây dựng bộ kiểm thử bằng Postman Collection Runner, giảm thời gian hồi đáp lỗi 20%.</li>
-            <li>Ứng dụng AI (ChatGPT, Gemini) để debug, viết tài liệu kỹ thuật và tối ưu quy trình phát triển.</li>
+            <li>
+              Phát triển và bảo trì các RESTful API cho hệ thống nội bộ bằng
+              Node.js và Express.js.
+            </li>
+            <li>
+              Chuyển đổi thiết kế từ Figma thành giao diện React.js Responsive
+              trên Desktop và Mobile.
+            </li>
+            <li>
+              Xây dựng bộ kiểm thử bằng Postman Collection Runner, giảm thời
+              gian hồi đáp lỗi 20%.
+            </li>
+            <li>
+              Ứng dụng AI (ChatGPT, Gemini) để debug, viết tài liệu kỹ thuật và
+              tối ưu quy trình phát triển.
+            </li>
           </ul>
         </div>
       </section>
@@ -116,17 +169,34 @@
           <div class="entry-header">
             <span>
               Dara Beauty Center
-              <span class="project-tech">React.js • Node.js • Express.js • MongoDB • Cloudinary • Vercel</span>
+              <span class="project-tech"
+                >React.js • Node.js • Express.js • MongoDB • Cloudinary •
+                Vercel</span
+              >
             </span>
             <span class="entry-date">
-              <a href="https://darabeautycenter.vercel.app/" target="_blank">Live Demo</a>
+              <a href="https://darabeautycenter.vercel.app/" target="_blank"
+                >Live Demo</a
+              >
             </span>
           </div>
           <ul class="entry-details">
-            <li>Phát triển website thương mại cho trung tâm làm đẹp từ thiết kế đến triển khai sản phẩm.</li>
-            <li>Xây dựng giao diện Responsive, tối ưu trải nghiệm trên Desktop, Tablet và Mobile.</li>
-            <li>Phát triển RESTful API, tích hợp Cloudinary để quản lý hình ảnh, triển khai trên Vercel.</li>
-            <li>Bảo trì, cập nhật tính năng và hỗ trợ khách hàng sau khi bàn giao dự án.</li>
+            <li>
+              Phát triển website thương mại cho trung tâm làm đẹp từ thiết kế
+              đến triển khai sản phẩm.
+            </li>
+            <li>
+              Xây dựng giao diện Responsive, tối ưu trải nghiệm trên Desktop,
+              Tablet và Mobile.
+            </li>
+            <li>
+              Phát triển RESTful API, tích hợp Cloudinary để quản lý hình ảnh,
+              triển khai trên Vercel.
+            </li>
+            <li>
+              Bảo trì, cập nhật tính năng và hỗ trợ khách hàng sau khi bàn giao
+              dự án.
+            </li>
           </ul>
         </div>
 
@@ -135,17 +205,33 @@
           <div class="entry-header">
             <span>
               Travel Booking Platform (LocaTrip)
-              <span class="project-tech">React.js • Node.js • Express.js • MongoDB • JWT</span>
+              <span class="project-tech"
+                >React.js • Node.js • Express.js • MongoDB • JWT</span
+              >
             </span>
             <span class="entry-date">
-              <a href="https://github.com/ThuanLamTu/LocaTrip" target="_blank">GitHub</a>
+              <a href="https://github.com/ThuanLamTu/LocaTrip" target="_blank"
+                >GitHub</a
+              >
             </span>
           </div>
           <ul class="entry-details">
-            <li>Phát triển ứng dụng tìm kiếm và đặt tour du lịch địa phương bằng MERN Stack.</li>
-            <li>Xây dựng RESTful API theo mô hình MVC, quản lý dữ liệu bằng MongoDB.</li>
-            <li>Triển khai JWT Authentication, Admin Dashboard và các thao tác CRUD.</li>
-            <li>Thiết kế giao diện Responsive tối ưu trải nghiệm người dùng trên nhiều thiết bị.</li>
+            <li>
+              Phát triển ứng dụng tìm kiếm và đặt tour du lịch địa phương bằng
+              MERN Stack.
+            </li>
+            <li>
+              Xây dựng RESTful API theo mô hình MVC, quản lý dữ liệu bằng
+              MongoDB.
+            </li>
+            <li>
+              Triển khai JWT Authentication, Admin Dashboard và các thao tác
+              CRUD.
+            </li>
+            <li>
+              Thiết kế giao diện Responsive tối ưu trải nghiệm người dùng trên
+              nhiều thiết bị.
+            </li>
           </ul>
         </div>
 
@@ -157,13 +243,25 @@
               <span class="project-tech">C++ • OOP • SDL2</span>
             </span>
             <span class="entry-date">
-              <a href="https://github.com/ThuanLamTu/ChickenInvader" target="_blank">GitHub</a>
+              <a
+                href="https://github.com/ThuanLamTu/ChickenInvader"
+                target="_blank"
+                >GitHub</a
+              >
             </span>
           </div>
           <ul class="entry-details">
-            <li>Phát triển game bắn máy bay 2D bằng C++ và SDL2 áp dụng lập trình hướng đối tượng (OOP).</li>
-            <li>Xây dựng hệ thống Player, Enemy, Bullet, Game Manager và cơ chế xử lý va chạm.</li>
-            <li>Tổ chức mã nguồn theo hướng dễ mở rộng, tái sử dụng và dễ bảo trì.</li>
+            <li>
+              Phát triển game bắn máy bay 2D bằng C++ và SDL2 áp dụng lập trình
+              hướng đối tượng (OOP).
+            </li>
+            <li>
+              Xây dựng hệ thống Player, Enemy, Bullet, Game Manager và cơ chế xử
+              lý va chạm.
+            </li>
+            <li>
+              Tổ chức mã nguồn theo hướng dễ mở rộng, tái sử dụng và dễ bảo trì.
+            </li>
           </ul>
         </div>
 
@@ -172,20 +270,35 @@
           <div class="entry-header">
             <span>
               Personal Portfolio
-              <span class="project-tech">HTML5 • CSS3 • JavaScript • GitHub Pages</span>
+              <span class="project-tech"
+                >HTML5 • CSS3 • JavaScript • GitHub Pages</span
+              >
             </span>
             <span class="entry-date">
-              <a href="https://thuanlamtu.github.io/thuanlamtu_newportfolio/" target="_blank">Live Demo</a>
+              <a
+                href="https://thuanlamtu.github.io/thuanlamtu_newportfolio/"
+                target="_blank"
+                >Live Demo</a
+              >
             </span>
           </div>
           <ul class="entry-details">
-            <li>Thiết kế và phát triển portfolio giới thiệu bản thân, kỹ năng và dự án.</li>
-            <li>Giao diện dark mode với glassmorphism, hiệu ứng particle canvas và scroll reveal.</li>
-            <li>Cấu trúc code tách thành component JS modules để dễ bảo trì và mở rộng.</li>
+            <li>
+              Thiết kế và phát triển portfolio giới thiệu bản thân, kỹ năng và
+              dự án.
+            </li>
+            <li>
+              Giao diện dark mode với glassmorphism, hiệu ứng particle canvas và
+              scroll reveal.
+            </li>
+            <li>
+              Cấu trúc code tách thành component JS modules để dễ bảo trì và mở
+              rộng.
+            </li>
           </ul>
         </div>
-
       </section>
-    </div><!-- /.cv-sheet -->
+    </div>
+    <!-- /.cv-sheet -->
   </body>
 </html>

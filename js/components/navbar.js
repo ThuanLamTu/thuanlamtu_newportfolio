@@ -3,7 +3,7 @@ export function renderNavbar() {
     <header class="main-header" id="mainHeader">
       <div class="container header-container">
         <a href="#" class="logo" id="headerLogo">
-          <img src="logo.jpg" alt="ThuanLam.Dev Logo" class="logo-img" id="logoImg" />
+          <img src="logo1.png" alt="ThuanLam.Dev Logo" class="logo-img" id="logoImg" />
         </a>
         <nav class="nav-menu" id="navMenu">
           <ul>
@@ -15,7 +15,7 @@ export function renderNavbar() {
           </ul>
         </nav>
         <div class="header-actions">
-          <a href="cv.html" class="btn btn-secondary btn-sm" id="btnHeaderCV" target="_blank">Xem CV Bản In</a>
+          <a href="cv.html?print=true" class="btn btn-secondary btn-sm" id="btnHeaderCV" target="_blank">⬇️ Tải CV (PDF)</a>
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
             <span class="bar"></span>
             <span class="bar"></span>

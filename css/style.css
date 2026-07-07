@@ -259,12 +259,12 @@ body {
 }
 
 .logo-img {
-    height: 44px;
+    height: 64px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-smooth);
     filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .logo-img:hover {

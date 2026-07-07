@@ -17,7 +17,7 @@ export function renderHero() {
           <div class="hero-btns" id="heroBtns">
             <a href="#contact" class="btn btn-primary" id="btnHeroContact">Liên Hệ Ngay</a>
             <a href="#projects" class="btn btn-outline" id="btnHeroProjects">Xem Dự Án</a>
-            <a href="cv.html" class="btn btn-secondary" id="btnDownloadCV" target="_blank" download>⬇️ Tải CV</a>
+            <a href="cv.html?print=true" class="btn btn-secondary" id="btnDownloadCV" target="_blank">⬇️ Tải CV (PDF)</a>
           </div>
           <div class="social-links" id="heroSocials">
             <a href="https://github.com/ThuanLamTu" target="_blank" aria-label="GitHub" class="social-link-item">
