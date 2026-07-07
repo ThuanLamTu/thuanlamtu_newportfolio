@@ -115,12 +115,20 @@ export function renderProjects() {
             </div>
             <div class="project-info">
               <div class="project-tags">
-                <span class="project-tag">C++</span>
+                <span class="project-tag">Java</span>
+                <span class="project-tag">JavaFX 21</span>
+                <span class="project-tag">Maven</span>
                 <span class="project-tag">OOP</span>
-                <span class="project-tag">Game Dev</span>
               </div>
               <h3>Chicken Invader Game</h3>
-              <p>Game bắn gà arcade cổ điển xây dựng bằng C++ áp dụng lập trình hướng đối tượng (OOP), Design Pattern và quản lý vòng đời game object.</p>
+              <p class="project-role"><strong>Đồ án môn OOP</strong> — Nhóm 4 người</p>
+              <p>Game bắn gà arcade 2D xây dựng bằng Java + JavaFX 21 áp dụng lập trình hướng đối tượng (OOP). Quản lý vòng đời game object, hệ thống điểm số và nhiều level.</p>
+              <ul class="project-highlights">
+                <li>✓ Java + JavaFX 21 + Apache Maven</li>
+                <li>✓ OOP: Player, Enemy, Bullet, GameManager</li>
+                <li>✓ Hệ thống nâng cấp đạn theo điểm số</li>
+                <li>✓ UI/UX thiết kế bằng Scene Builder</li>
+              </ul>
               <div class="project-links">
                 <a href="https://github.com/ThuanLamTu/ChickenInvader" target="_blank" class="project-link-btn">
                   ${GH_ICON} Xem GitHub
