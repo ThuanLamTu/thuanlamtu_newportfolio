@@ -22,8 +22,8 @@ export function renderProjects() {
 
           <!-- Project 1: Clean5S (Client Project) -->
           <div class="project-card glass-card featured-project" data-category="frontend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">✨</span>
+            <div class="project-img-placeholder" style="background: radial-gradient(circle at center, #0f2735 0%, #090d16 100%);">
+              <img src="https://www.clean5s.com/logo.png" alt="Clean5S Logo" class="project-logo-img" style="max-width: 150px; max-height: 110px;" />
             </div>
             <div class="project-info">
               <div class="project-badge">Dự Án Khách Hàng Thực Tế</div>
@@ -52,8 +52,8 @@ export function renderProjects() {
 
           <!-- Project 2: Nexa Real-Time Chat App -->
           <div class="project-card glass-card" data-category="backend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">💬</span>
+            <div class="project-img-placeholder" style="background: radial-gradient(circle at center, #151d30 0%, #0b0f19 100%);">
+              <img src="https://nexa-lam-tu.vercel.app/favicon.svg" alt="Nexa Logo" class="project-logo-img" style="max-width: 100px; max-height: 100px;" />
             </div>
             <div class="project-info">
               <div class="project-badge" style="background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.3);">Real-Time App</div>
@@ -82,8 +82,8 @@ export function renderProjects() {
 
           <!-- Project 3: Cakling - Làng Dệt Chăm Mỹ Nghiệp -->
           <div class="project-card glass-card" data-category="frontend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">🧵</span>
+            <div class="project-img-placeholder" style="background: radial-gradient(circle at center, #1e190e 0%, #090d16 100%);">
+              <img src="https://cakling.vercel.app/assets/logo.svg" alt="Cakling Logo" class="project-logo-img" style="max-width: 120px; max-height: 120px;" />
             </div>
             <div class="project-info">
               <div class="project-badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">Văn Hóa &amp; Di Sản</div>
@@ -111,8 +111,8 @@ export function renderProjects() {
 
           <!-- Project 4: Dara Beauty Center (Featured Client) -->
           <div class="project-card glass-card" data-category="frontend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">💄</span>
+            <div class="project-img-placeholder" style="background: radial-gradient(circle at center, #0d2217 0%, #090d16 100%);">
+              <img src="https://darabeautycenter.vercel.app/images/dara-logo.png" alt="Dara Beauty Center Logo" class="project-logo-img" style="max-width: 140px; max-height: 110px;" />
             </div>
             <div class="project-info">
               <div class="project-badge">Dự Án Khách Hàng</div>
