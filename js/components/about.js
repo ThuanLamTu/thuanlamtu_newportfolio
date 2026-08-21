@@ -12,13 +12,11 @@ export function renderAbout() {
             <p>
               Là <strong>Fullstack Developer</strong> có kinh nghiệm xây dựng các ứng dụng web
               responsive sử dụng <strong>React</strong>, <strong>JavaScript</strong>,
-              <strong>Node.js</strong> và <strong>MongoDB</strong>.
+              <strong>Node.js</strong>, <strong>Socket.io</strong> và <strong>MongoDB</strong>.
             </p>
             <p>
               Mình có niềm đam mê tạo ra giao diện người dùng sạch đẹp, tối ưu hiệu năng và
-              không ngừng học hỏi các công nghệ web hiện đại. Trong thời gian thực tập, mình
-              đã được làm việc thực tế với khách hàng, triển khai sản phẩm và hỗ trợ sau khi
-              ra mắt.
+              không ngừng học hỏi các công nghệ web hiện đại. Mình đã có kinh nghiệm xây dựng &amp; triển khai các sản phẩm thực tế cho khách hàng, ứng dụng nhắn tin thời gian thực (Real-time Chat) và các dự án văn hóa truyền thống.
             </p>
             <p>
               Mình cũng biết vận dụng các công cụ <strong>AI</strong> vào quy trình phát triển
@@ -31,12 +29,12 @@ export function renderAbout() {
               <span class="stat-label">Năm kinh nghiệm thực tế (Học tập &amp; Intern)</span>
             </div>
             <div class="stat-card glass-card">
-              <span class="stat-num">05+</span>
-              <span class="stat-label">Dự án hoàn thiện (Cá nhân &amp; Nhóm)</span>
+              <span class="stat-num">06+</span>
+              <span class="stat-label">Dự án hoàn thiện (Cá nhân &amp; Khách hàng)</span>
             </div>
             <div class="stat-card glass-card">
-              <span class="stat-num">02</span>
-              <span class="stat-label">Client projects đã bàn giao</span>
+              <span class="stat-num">03+</span>
+              <span class="stat-label">Dự án thực tế &amp; Live Demo đã bàn giao</span>
             </div>
           </div>
         </div>

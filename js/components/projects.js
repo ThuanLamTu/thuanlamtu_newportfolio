@@ -20,7 +20,126 @@ export function renderProjects() {
         <!-- Grid -->
         <div class="projects-grid" id="projectsGrid">
 
-          <!-- Project 1: Travel Booking Platform -->
+          <!-- Project 1: Clean5S (Client Project) -->
+          <div class="project-card glass-card featured-project" data-category="frontend">
+            <div class="project-img-placeholder">
+              <span class="project-icon">✨</span>
+            </div>
+            <div class="project-info">
+              <div class="project-badge">Dự Án Khách Hàng Thực Tế</div>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Responsive</span>
+                <span class="project-tag">SEO</span>
+                <span class="project-tag">Clean5S</span>
+              </div>
+              <h3>Clean5S - Website Dịch Vụ Vệ Sinh</h3>
+              <p class="project-role"><strong>Role:</strong> Full-Stack Developer (Đã bàn giao sản xuất)</p>
+              <ul class="project-highlights">
+                <li>✓ Thiết kế và xây dựng website dịch vụ chuyên nghiệp</li>
+                <li>✓ Giao diện chuẩn SEO, tối ưu tốc độ tải trang</li>
+                <li>✓ Tương thích hoàn hảo trên Desktop &amp; Mobile</li>
+                <li>✓ Đã bàn giao và vận hành chính thức cho khách hàng</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://www.clean5s.com/" target="_blank" class="project-link-btn project-link-live">
+                  ${EXT_ICON} Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Nexa Real-Time Chat App -->
+          <div class="project-card glass-card" data-category="backend">
+            <div class="project-img-placeholder">
+              <span class="project-icon">💬</span>
+            </div>
+            <div class="project-info">
+              <div class="project-badge" style="background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.3);">Real-Time App</div>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Socket.io</span>
+                <span class="project-tag">TailwindCSS</span>
+                <span class="project-tag">Vercel</span>
+              </div>
+              <h3>Nexa - Real-Time Social Chat</h3>
+              <p>Ứng dụng nhắn tin thời gian thực giả lập trải nghiệm mạng xã hội hiện đại như Facebook / Instagram.</p>
+              <ul class="project-highlights">
+                <li>✓ Trò chuyện &amp; gửi tin nhắn thời gian thực</li>
+                <li>✓ Giao diện mượt mà phong cách Facebook / Instagram</li>
+                <li>✓ Tối ưu hóa UI/UX trên Mobile &amp; Desktop</li>
+                <li>✓ Triển khai trực tiếp trên môi trường Vercel</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://nexa-lam-tu.vercel.app/" target="_blank" class="project-link-btn project-link-live">
+                  ${EXT_ICON} Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Cakling - Làng Dệt Chăm Mỹ Nghiệp -->
+          <div class="project-card glass-card" data-category="frontend">
+            <div class="project-img-placeholder">
+              <span class="project-icon">🧵</span>
+            </div>
+            <div class="project-info">
+              <div class="project-badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">Văn Hóa &amp; Di Sản</div>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">TailwindCSS</span>
+                <span class="project-tag">UI/UX Design</span>
+                <span class="project-tag">Vercel</span>
+              </div>
+              <h3>Cakling - Làng Dệt Chăm Mỹ Nghiệp</h3>
+              <p>Dự án quảng bá và thúc đẩy ngành dệt thổ cẩm truyền thống lâu đời của làng người Chăm Mỹ Nghiệp.</p>
+              <ul class="project-highlights">
+                <li>✓ Tôn vinh di sản văn hóa dệt thổ cẩm truyền thống</li>
+                <li>✓ Giao diện nghệ thuật đậm nét di sản làng Mỹ Nghiệp</li>
+                <li>✓ Quảng bá sản phẩm &amp; nghệ nhân làng nghề Chăm</li>
+                <li>✓ Đã triển khai và hoạt động trên Vercel</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://cakling.vercel.app/#" target="_blank" class="project-link-btn project-link-live">
+                  ${EXT_ICON} Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Dara Beauty Center (Featured Client) -->
+          <div class="project-card glass-card" data-category="frontend">
+            <div class="project-img-placeholder">
+              <span class="project-icon">💄</span>
+            </div>
+            <div class="project-info">
+              <div class="project-badge">Dự Án Khách Hàng</div>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Express</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">Vercel</span>
+              </div>
+              <h3>Dara Beauty Center</h3>
+              <p class="project-role"><strong>Role:</strong> Full-Stack Developer</p>
+              <ul class="project-highlights">
+                <li>✓ Thiết kế website thẩm mỹ viện responsive hiện đại</li>
+                <li>✓ Giao diện mobile-friendly, UX chuẩn</li>
+                <li>✓ Tích hợp chức năng liên hệ &amp; đặt lịch</li>
+                <li>✓ Tối ưu hiệu năng &amp; triển khai sản xuất</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://darabeautycenter.vercel.app/" target="_blank" class="project-link-btn project-link-live">
+                  ${EXT_ICON} Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Travel Booking Platform -->
           <div class="project-card glass-card" data-category="backend">
             <div class="project-img-placeholder">
               <span class="project-icon">✈️</span>
@@ -40,7 +159,6 @@ export function renderProjects() {
                 <li>✓ RESTful API</li>
                 <li>✓ Responsive UI</li>
                 <li>✓ Admin Dashboard</li>
-                <li>✓ Deployed on Vercel &amp; Render</li>
               </ul>
               <div class="project-links">
                 <a href="https://github.com/ThuanLamTu/LocaTrip" target="_blank" class="project-link-btn">
@@ -50,65 +168,7 @@ export function renderProjects() {
             </div>
           </div>
 
-          <!-- Project 2: Dara Beauty Center (Featured Client) -->
-          <div class="project-card glass-card featured-project" data-category="frontend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">💄</span>
-            </div>
-            <div class="project-info">
-              <div class="project-badge">Featured Client Project</div>
-              <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Node.js</span>
-                <span class="project-tag">Express</span>
-                <span class="project-tag">MongoDB</span>
-                <span class="project-tag">Vercel</span>
-                <span class="project-tag">Render</span>
-              </div>
-              <h3>Dara Beauty Center</h3>
-              <p class="project-role"><strong>Role:</strong> Full-Stack Developer</p>
-              <ul class="project-highlights">
-                <li>✓ Thiết kế website thẩm mỹ viện responsive hiện đại</li>
-                <li>✓ Giao diện mobile-friendly, UX chuẩn</li>
-                <li>✓ Tích hợp chức năng liên hệ &amp; đặt lịch</li>
-                <li>✓ Tối ưu hiệu năng &amp; triển khai sản xuất</li>
-                <li>✓ Hỗ trợ khách hàng sau khi ra mắt</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://darabeautycenter.vercel.app/" target="_blank" class="project-link-btn project-link-live">
-                  ${EXT_ICON} Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: Confidential Business Website -->
-          <div class="project-card glass-card" data-category="frontend">
-            <div class="project-img-placeholder">
-              <span class="project-icon">🔒</span>
-            </div>
-            <div class="project-info">
-              <div class="project-badge confidential">Confidential Client Project</div>
-              <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Express</span>
-                <span class="project-tag">MongoDB</span>
-              </div>
-              <h3>Business Website (Private Project)</h3>
-              <p>Dự án thương mại phát triển cho khách hàng. Mã nguồn và website không công khai theo thỏa thuận bảo mật.</p>
-              <ul class="project-highlights">
-                <li>✓ Thu thập yêu cầu từ khách hàng</li>
-                <li>✓ Phát triển frontend responsive</li>
-                <li>✓ Tích hợp Backend APIs</li>
-                <li>✓ Deploy &amp; bảo trì website sản xuất</li>
-              </ul>
-              <div class="project-links">
-                <span class="project-link-btn disabled">🔒 Source Code Confidential</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4: Chicken Invader Game -->
+          <!-- Project 6: Chicken Invader Game -->
           <div class="project-card glass-card" data-category="frontend">
             <div class="project-img-placeholder">
               <span class="project-icon">🐓</span>
@@ -121,12 +181,11 @@ export function renderProjects() {
                 <span class="project-tag">OOP</span>
               </div>
               <h3>Chicken Invader Game</h3>
-              <p>Game bắn gà arcade 2D xây dựng bằng Java + JavaFX 21 áp dụng lập trình hướng đối tượng (OOP). Quản lý vòng đời game object, hệ thống điểm số và nâng cấp đạn theo level.</p>
+              <p>Game bắn gà arcade 2D xây dựng bằng Java + JavaFX 21 áp dụng lập trình hướng đối tượng (OOP).</p>
               <ul class="project-highlights">
                 <li>✓ Java + JavaFX 21 + Apache Maven</li>
                 <li>✓ OOP: Player, Enemy, Bullet, GameManager</li>
                 <li>✓ Hệ thống nâng cấp đạn theo điểm số</li>
-                <li>✓ UI/UX thiết kế bằng Scene Builder</li>
               </ul>
               <div class="project-links">
                 <a href="https://github.com/ThuanLamTu/ChickenInvader" target="_blank" class="project-link-btn">
