@@ -118,12 +118,14 @@ body {
 .project-name { font-weight: 700; font-size: 1rem; }
 .project-tech { font-size: 0.8rem; color: var(--accent-color); font-weight: 500; margin-left: 8px; }
 
-/* ==========================================
-   PRINT STYLES (A4 BLACK & WHITE)
-   ========================================== */
+@page {
+  size: A4;
+  margin: 10mm 15mm;
+}
+
 @media print {
-  body { background-color: #fff; color: #000; padding: 0; font-size: 11pt; }
-  .print-btn-container { display: none; }
+  html, body { background-color: #fff; color: #000; padding: 0; margin: 0; font-size: 11pt; }
+  .print-btn-container { display: none !important; }
   .cv-sheet { border: none; box-shadow: none; padding: 0; max-width: 100%; background-color: #fff; }
   .header-title h1 { background: none; -webkit-background-clip: initial; -webkit-text-fill-color: initial; color: #000; font-size: 24pt; }
   .header-title h2 { color: #333; font-size: 13pt; }
